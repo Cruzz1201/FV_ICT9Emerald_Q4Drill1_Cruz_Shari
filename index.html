@@ -22,26 +22,27 @@
 </head>
 <body>
 
-    <div class="container-fluid" style="background-color: #DFBCC1; opacity: 80%; text-align: center; height: auto; border-radius: 15px;">
+    <div class="container-fluid" style="background-color: #DFBCC1; opacity: 80%; text-align: center; height: auto; border-radius: 15px; height: 100px; width: 550px;">
 
         <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: #465F88 ">Electricity Consumption Classifier</h1>
         <!--comment-->
 
     </div>
 
-    <div class="container-fluid" style="background-color: #DFBCC1; opacity: 80%; text-align: center; height: auto; border-radius: 15px; margin-top: 20px; height: 100px ;">
+    <div class="container-fluid" style="background-color: #DFBCC1; opacity: 80%; text-align: center; border-radius: 15px; margin-top: 20px; height: 100px; width: 550px;">
 
        <div class="row">
 
             <div class="col-3">
                 <br>
-                    <img src="https://img.freepik.com/free-vector/electric-flash-thunderbolt-light-bulb-symbol-design_1017-60403.jpg?semt=ais_rp_progressive&w=740&q=80" alt="lightbulb" style="width: 50px; height: 50px; border-radius: 5px;">
+                    <img src="https://img.freepik.com/free-vector/electric-flash-thunderbolt-light-bulb-symbol-design_1017-60403.jpg?semt=ais_rp_progressive&w=740&q=80" alt="lightbulb" style="width: 60px; height: 60px; border-radius: 10px;">
             </div>
 
 
             <div class="col-6">
              <br>
-                <input type="text" id="Amount" class="form-control" placeholder="Type here..."  style="align-items: center;"></iput>
+             <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: #465F88 ">kWh</h4>
+                <input type="text" id="Amount" class="form-control" placeholder="Enter Kilowatt per hour here..."; required></iput>
             </div>
 
             <div class="col-3">
@@ -56,11 +57,11 @@
         function checkAmount(){
             var amount = document.getElementById("Amount").value;
             
-            if(isNaN(amount) || amount < 0) {
+            if(isNaN(amount) || amount < 0){
                 alert("Please input a valid number")
             }
 
-            else if((amount >= 0) && (amount <=100)){
+            else if((amount >= 1) && (amount <=100)){
                 alert("Lifeline Consumer: Discounted Electricity Rate ")
             }
 
